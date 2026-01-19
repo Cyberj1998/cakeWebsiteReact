@@ -8,7 +8,7 @@ import Navbar from './componennts/Navbar';
 import Hero from './componennts/Hero';
 import Shop from './componennts/Shop';
 import Cart from './componennts/Cart';
-import Popular from './componennts/Popular';
+import Bento from './componennts/Bento';
 import { gsap } from "gsap";
 import { ScrollSmoother } from 'gsap/ScrollSmoother';
 gsap.registerPlugin(ScrollSmoother);
@@ -32,7 +32,7 @@ function App() {
             <div id='smooth-content'>
               <Navbar/>
               <Hero /> 
-              <Popular />
+              <Bento />
             </div>
           </div>
           </>

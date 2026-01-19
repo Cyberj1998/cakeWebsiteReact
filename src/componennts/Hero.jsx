@@ -18,7 +18,6 @@ const Hero = () => {
 
     const textSplit = new SplitText('.PrimaryText', {type: 'chars, words'})
     const textSplit2 = new SplitText('.SecondaryText', {type: 'chars, words'})
-    const textSplit3 = new SplitText('.SecondaryP', {type: 'chars, words'})
 
 
     gsap.from(textSplit.chars,{
@@ -68,35 +67,18 @@ const Hero = () => {
       }
     });
 
-    gsap.from(textSplit2.chars,{
-      opacity: 0,
-      yPercent: 50,
-      duration: 1.8,
-      ease: 'expo.out',
-      stagger: 0.06,
-      scrollTrigger: {
-        start: 'top top',
-        end: 'bottom bottom',
-        scrub: true,      
-        markers: true
-    }
-    })
-
     
-    gsap.from(textSplit3.chars , {
+    gsap.from(textSplit2.chars, {
       opacity: 0,
       yPercent: 50,
-      duration: 1.9,
-      ease: 'expo.out',
       stagger: 0.06,
       scrollTrigger: {
-        trigger: 'firstHalf',
-        start: 'top top',
-        end: 'bottom bottom',
+        start: 'top top',   
+        end: 'center center', 
         scrub: true,
-        markers: true,
+        markers: true
       }
-    })
+    });
 
   },[])
 
@@ -143,9 +125,9 @@ const Hero = () => {
           <p 
             className="mt-5 w-fit text-[#6e6e6e] text-center p-2 font-sans font-semibold z-10"
           >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit <br />
-            Lorem ipsum dolor sit amet consectetur adipisicing elit <br />
-            Lorem ipsum dolor sit amet consectetur adipisicing elit <br />
+            Lorem ipsum dolor sit amet consectetur adipisicing elit
+            Lorem ipsum dolor sit amet consectetur adipisicing elit
+            Lorem ipsum dolor sit amet consectetur adipisicing elit
             Lorem ipsum dolor sit amet.
           </p>
           <Button />
@@ -159,14 +141,16 @@ const Hero = () => {
         </div>
       </div>
       <div className='secondHalf h-screen w-full flex flex-row max-md:flex-col justify-center items-center'>
-        <div className="h-screen max-md:h-[50%] w-[50%] border-2 border-red-400 max-md:w-full flex justify-center items-center">
+        <div className="h-screen max-md:h-[50%] w-[50%] max-md:w-full flex justify-center items-center">
           <div 
             className="shapeElement bg-[#eed7af] h-100 w-100 rounded-bl-[200px] rounded-br-[100px] rounded-tl-[200px] rounded-tr-[150px] relative"
           ></div>
         </div>
-        <div className="texthalf border-2 border-blue-500 h-screen max-md:h-[50%] w-[50%] max-md:w-full flex flex-col justify-center items-center">
-          <div className="textConntainer border-2 border-amber-600">
-            <h3 className="SecondaryText text-[#eed7af] text-[50px] font-extrabold text-left leading-tight">make with the best <br /> ingredients</h3>
+        <div className="texthalf h-screen max-md:h-[50%] w-[50%] max-md:w-full flex flex-col justify-center items-center">
+          <div className="textConntainer">
+            <h3 className="SecondaryText text-[#eed7af] text-[60px] font-extrabold text-left leading-tight">
+              make with the best <br /> ingredients
+            </h3>
             <p className="SecondaryP text-[#6e6e6e] text-left font-sans font-semibold w-112.5">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Officia sunt qui pariatur, fugit dicta in suscipit animi 
