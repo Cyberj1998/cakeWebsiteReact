@@ -11,8 +11,8 @@ const Marquee = () => {
       {phrases.map((phrase, i)=>(
         <>
           <h3
-            className="text-[50px] p-0 m-0 font-extrabold leading-none uppercase text-[#eed7af] [text-box: trim-both_cap_alphabetic]" 
             key={i}
+            className="text-[50px] p-0 m-0 font-extrabold leading-none uppercase text-[#eed7af] [text-box: trim-both_cap_alphabetic]" 
           >
             {phrase}
           </h3>
