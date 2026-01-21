@@ -1,6 +1,8 @@
 
 
 const BentoCard = ({ card }) => {
+
+    
   return (
     <div className={`m-2 rounded-2xl ${card.col} ${card.row} max-md:col-span-3 max-md:row-span-2 relative`} >
       <img 

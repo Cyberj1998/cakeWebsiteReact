@@ -9,6 +9,8 @@ import Hero from './componennts/Hero';
 import Shop from './componennts/Shop';
 import Cart from './componennts/Cart';
 import Bento from './componennts/Bento';
+import Marquee from './componennts/Marquee';
+import Selector from './componennts/Selector';
 import { gsap } from "gsap";
 import { ScrollSmoother } from 'gsap/ScrollSmoother';
 gsap.registerPlugin(ScrollSmoother);
@@ -33,6 +35,9 @@ function App() {
               <Navbar/>
               <Hero /> 
               <Bento />
+              <Marquee />
+              <Selector />
+              <Marquee />
             </div>
           </div>
           </>
