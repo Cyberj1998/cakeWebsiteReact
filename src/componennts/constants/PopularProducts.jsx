@@ -7,19 +7,19 @@ const popularProducts = [
   {
     id: 0,
     name: 'cake name 1',
-    description: 'brief description of the cake Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus incidunt nemo cum modi  odit corporis, aliquid ipsa numquam quam similique, in odio',
+    description: '1 brief description of the cake Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus incidunt nemo cum modi  odit corporis, aliquid ipsa numquam quam similique, in odio',
     image: popularProductImage1
   },
   {
     id: 1,
     name: 'cake name 2',
-    description: 'brief description of the cake Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus incidunt nemo cum modi  odit corporis, aliquid ipsa numquam quam similique, in odio',
+    description: '2 brief description of the cake Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus incidunt nemo cum modi  odit corporis, aliquid ipsa numquam quam similique, in odio',
     image: popularProductImage2
   },
   {
     id: 2,
     name: 'cake name 3',
-    description: 'brief description of the cake Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus incidunt nemo cum modi  odit corporis, aliquid ipsa numquam quam similique, in odio',
+    description: '3 1brief description of the cake Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus incidunt nemo cum modi  odit corporis, aliquid ipsa numquam quam similique, in odio',
     image: popularProductImage3
   },
 ]

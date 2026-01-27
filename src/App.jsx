@@ -11,6 +11,8 @@ import Cart from './componennts/Cart';
 import Bento from './componennts/Bento';
 import Marquee from './componennts/Marquee';
 import Selector from './componennts/Selector';
+import LateralScroll from './componennts/LateralScroll';
+import Extension from './componennts/Extension';
 import { gsap } from "gsap";
 import { ScrollSmoother } from 'gsap/ScrollSmoother';
 gsap.registerPlugin(ScrollSmoother);
@@ -32,12 +34,14 @@ function App() {
           <>
           <div id='smooth-wrapper'>
             <div id='smooth-content'>
-              <Navbar/>
+              {/*<Navbar/>
               <Hero /> 
               <Bento />
-              <Marquee />
+              <Marquee />*/}
               <Selector />
               <Marquee />
+              <LateralScroll />
+              <Extension />
             </div>
           </div>
           </>

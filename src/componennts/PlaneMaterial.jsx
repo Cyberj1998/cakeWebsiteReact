@@ -5,11 +5,11 @@ import { useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ContactShadows } from '@react-three/drei';
 
-const PlaneMaterial = ({ selected }) => {
+const PlaneMaterial = ({ selected, setSelectedCurrent, selectedCurrent }) => {
 
-  const texture = useLoader(TextureLoader, '/images/mostPopular-3.png')
-  const texture2 = useLoader(TextureLoader, '/images/mostPopular-2.png')
-  const texture3 = useLoader(TextureLoader, '/images/mostPopular-1.png')
+  const texture = useLoader(TextureLoader, '/images/mostPopular-3.png');
+  const texture2 = useLoader(TextureLoader, '/images/mostPopular-2.png');
+  const texture3 = useLoader(TextureLoader, '/images/mostPopular-1.png');
 
   const arrayTextures = [texture, texture2, texture3]
 
@@ -48,11 +48,29 @@ const PlaneMaterial = ({ selected }) => {
 
   },[])
 
+  useEffect(()=>{
+  
+    const tl = gsap.timeline();
+  
+    tl.to(cakeRef.current.position, { 
+      y: 40,
+      duration: .9,
+      ease: "power2.out",
+      onComplete: () => {
+        setSelectedCurrent(selected)
+      }
+    }).to(cakeRef.current.position, { 
+      y: 0,
+      duration: .5,
+      ease: "elastic.out(1,1.2)",
+    });
+  },[selected])
+
   return (
     <group>
       <mesh rotation={[0, 0, 0]} ref={cakeRef}>
         <planeGeometry args={[width, height]} />
-        <meshBasicMaterial map={arrayTextures[selected]} transparent />
+        <meshBasicMaterial map={arrayTextures[selectedCurrent]} transparent />
       </mesh>
       <ContactShadows
         position={[2, 2, 3]} 

@@ -1,4 +1,3 @@
-import { useState } from "react"
 
 const SelectorCard = ({ product, setSelected }) => {
 
